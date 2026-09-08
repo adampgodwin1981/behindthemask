@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Man Behind the Mask | Chad Power</title>
+  <meta name="description" content="The Man Behind the Mask — a memoir about love, heartbreak and 18 months on the Isle of Wight, written by Chad Power.">
+  <meta name="author" content="Chad Power">
+  <meta property="og:title" content="The Man Behind the Mask">
+  <meta property="og:description" content="A memoir about love, heartbreak and 18 months on the Isle of Wight.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="book-cover.png">
+  <meta name="theme-color" content="#0b0b0b">
+  <link rel="icon" href="book-cover.png">
+  <style>
+    :root{
+      --ink:#0b0b0b;
+      --soft:#f5f3ef;
+      --paper:#fbfaf7;
+      --muted:#77736d;
+      --line:#d9d5ce;
+      --gold:#a68a52;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:var(--paper);
+      font-family:Georgia,"Times New Roman",serif;
+      line-height:1.7;
+    }
+    a{color:inherit}
+    .nav{
+      position:fixed; top:0; left:0; right:0; z-index:10;
+      background:rgba(251,250,247,.94);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(0,0,0,.08);
+    }
+    .nav-inner{
+      max-width:var(--max); margin:auto; padding:14px 28px;
+      display:flex; justify-content:space-between; align-items:center;
+    }
+    .brand{font:700 13px/1 Arial,sans-serif; letter-spacing:.24em; text-transform:uppercase}
+    .nav a{text-decoration:none}
+    .nav-links{display:flex; gap:26px; font:600 11px/1 Arial,sans-serif; letter-spacing:.14em; text-transform:uppercase}
+    .hero{
+      min-height:100vh; padding:120px 28px 70px;
+      display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:center;
+      max-width:var(--max); margin:auto;
+    }
+    .hero-copy{max-width:560px}
+    .eyebrow{font:700 11px/1.4 Arial,sans-serif; letter-spacing:.3em; text-transform:uppercase; color:var(--muted); margin-bottom:24px}
+    h1{font-size:clamp(52px,7vw,92px); line-height:.88; font-weight:400; margin:0 0 28px; letter-spacing:-.045em}
+    .tagline{font-size:20px; line-height:1.45; max-width:500px; margin-bottom:34px}
+    .truth{font:700 12px/1.5 Arial,sans-serif; letter-spacing:.35em; text-transform:uppercase; margin:25px 0 30px}
+    .cta{
+      display:inline-block; padding:15px 24px; background:var(--ink); color:#fff;
+      text-decoration:none; font:700 11px/1 Arial,sans-serif; letter-spacing:.16em; text-transform:uppercase;
+      transition:.2s ease;
+    }
+    .cta:hover{transform:translateY(-2px); background:#2b2b2b}
+    .cover-wrap{display:flex; justify-content:center}
+    .cover{width:min(440px,90%); box-shadow:0 30px 70px rgba(0,0,0,.18)}
+    section{padding:105px 28px}
+    .section-inner{max-width:var(--max); margin:auto}
+    .dark{background:var(--ink); color:#fff}
+    .section-label{font:700 11px/1 Arial,sans-serif; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); margin-bottom:18px}
+    h2{font-size:clamp(38px,5vw,62px); line-height:1; font-weight:400; letter-spacing:-.035em; margin:0 0 28px}
+    .story-grid{display:grid; grid-template-columns:1.05fr .95fr; gap:80px; align-items:start}
+    .lead{font-size:23px; line-height:1.5; margin:0 0 22px}
+    .body{font-size:17px; color:#d6d2ca; max-width:720px}
+    .island-section{padding:105px 28px; background:#eee}
+    .island-inner{max-width:var(--max); margin:auto; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center}
+    .island-image-wrap{display:flex; justify-content:center; align-items:center}
+    .island-image{width:min(440px,90%); height:auto; display:block; box-shadow:0 30px 70px rgba(0,0,0,.16)}
+    .island-copy{max-width:560px}
+    .island-copy p{font-size:19px; line-height:1.65; color:#555; max-width:560px}
+    .about{background:var(--soft)}
+    .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:80px}
+    .about p{font-size:18px}
+    .press-box{
+      border:1px solid var(--line); padding:42px; background:#fff;
+      display:grid; grid-template-columns:1fr 1fr; gap:50px;
+    }
+    .press-box p{font-size:17px}
+    .press-list{font:600 13px/1.8 Arial,sans-serif; letter-spacing:.03em}
+    .buy{text-align:center; background:#e9e5dc}
+    .buy p{font-size:20px; max-width:650px; margin:0 auto 30px}
+    footer{padding:35px 28px; background:#050505; color:#aaa; text-align:center; font:10px/1.7 Arial,sans-serif; letter-spacing:.16em; text-transform:uppercase}
+
+    .contact{background:#f2eee7; text-align:center}
+    .contact-inner{max-width:760px}
+    .contact p{max-width:600px; margin:0 auto 28px; color:#555; font:18px/1.7 Georgia,serif}
+    @media(max-width:800px){
+      .nav-links{display:none}
+      .hero{grid-template-columns:1fr; gap:45px; padding-top:105px}
+      .hero-copy{order:2}
+      .cover-wrap{order:1}
+      .story-grid,.about-grid,.press-box,.island-inner{grid-template-columns:1fr; gap:35px}
+      section{padding:75px 22px}
+      .island-section{padding:75px 22px}
+      .island-image{width:min(420px,100%)}
+      .island-copy p{font-size:17px}
+      .press-box{padding:28px}
+      h1{font-size:60px}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top">The Man Behind the Mask</a>
+      <div class="nav-links">
+        <a href="#story">The Story</a>
+        <a href="#island">The Island</a>
+        <a href="#about">About</a>
+        <a href="#press">Press</a>
+        <a href="#buy">Buy</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="cover-wrap">
+        <img class="cover" src="book-cover.png" alt="The Man Behind the Mask by Chad Power book cover">
+      </div>
+      <div class="hero-copy">
+        <div class="eyebrow">A memoir</div>
+        <h1>The Man<br>Behind the<br>Mask</h1>
+        <p class="tagline">A memoir about love, heartbreak and 18 months on the Isle of Wight.</p>
+        <div class="truth">Truth Is Lived</div>
+        <a class="cta" href="https://www.amazon.co.uk/dp/B0HGNDBBRC" target="_blank" rel="noopener">Buy the book on Amazon</a>
+      </div>
+    </section>
+
+    <section id="story" class="dark">
+      <div class="section-inner story-grid">
+        <div>
+          <div class="section-label">The Story</div>
+          <h2>Some stories are easier to live than to tell.</h2>
+        </div>
+        <div>
+          <p class="lead">The Man Behind the Mask is an unfiltered memoir about love, heartbreak, mistakes and the search for the person underneath the life we think we are supposed to be living.</p>
+          <p class="body">Set across an intense 18-month period, the story follows one man's journey through love, loss and the consequences of choices made along the way. At its heart is a question that becomes impossible to avoid: who are you when the mask finally comes off?</p>
+          <p class="body">It is a story of relationships, identity, regret, resilience and the difficult work of looking honestly at yourself — without pretending that every answer is comfortable.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="island" class="island-section">
+      <div class="island-inner">
+        <div class="island-image-wrap">
+          <img class="island-image" src="isle-of-wight.png" alt="The Pepperpot on the Isle of Wight">
+        </div>
+        <div class="island-copy">
+          <div class="section-label">The Isle of Wight</div>
+          <h2>A place that became part of the story.</h2>
+          <p>The Isle of Wight is more than a backdrop to the memoir. It became a place where memories were made, relationships changed, difficult truths surfaced and a chapter of life unfolded.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="section-inner about-grid">
+        <div>
+          <div class="section-label">The Author</div>
+          <h2>Chad Power</h2>
+        </div>
+        <div>
+          <p>Chad Power is the name behind <em>The Man Behind the Mask</em>.</p>
+          <p>The memoir is deliberately presented without the usual author biography. The story is the thing that matters here — the choices, the relationships, the consequences and what happens when you stop hiding from yourself.</p>
+          <p>Sometimes the most honest way to tell a story is to step back and let the words speak for themselves.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="press">
+      <div class="section-inner">
+        <div class="section-label">Press & Media</div>
+        <h2>For reviewers, journalists & book groups.</h2>
+        <div class="press-box">
+          <div>
+            <p><strong>The Man Behind the Mask</strong> is a memoir about love, heartbreak and 18 months on the Isle of Wight, exploring identity, regret, relationships and the difficult process of rebuilding yourself.</p>
+            <p>Press, review and interview enquiries are welcome.</p>
+          </div>
+          <div class="press-list">
+            BOOK TITLE<br>
+            THE MAN BEHIND THE MASK<br><br>
+            AUTHOR<br>
+            CHAD POWER<br><br>
+            GENRE<br>
+            MEMOIR / AUTOBIOGRAPHY<br><br>
+            SETTING<br>
+            ISLE OF WIGHT
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="buy" class="buy">
+      <div class="section-inner">
+        <div class="section-label">Get the book</div>
+        <h2>Truth is lived.</h2>
+        <p>Read the memoir and step behind the mask.</p>
+        <a class="cta" href="https://www.amazon.co.uk/dp/B0HGNDBBRC" target="_blank" rel="noopener">Find it on Amazon</a>
+      </div>
+    </section>
+  </main>
+
+
+    <section id="contact" class="contact">
+      <div class="section-inner contact-inner">
+        <div class="section-label">Contact</div>
+        <h2>Get in touch.</h2>
+        <p>For press, review, interview or book group enquiries, contact Chad Power directly.</p>
+        <a class="cta" href="mailto:ChadBehindTheMask@gmail.com?subject=The%20Man%20Behind%20The%20Mask%20Enquiry">Contact us</a>
+      </div>
+    </section>
+
+  <footer>
+    The Man Behind the Mask &nbsp;·&nbsp; Chad Power &nbsp;·&nbsp; Truth Is Lived
+  </footer>
+</body>
+</html>
